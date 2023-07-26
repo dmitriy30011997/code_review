@@ -41,7 +41,7 @@ begin
             and cd.ID_mapping_DataSource = 1
         join syn.CustomerSystemType as cst on sa.CustomerSystemType = cst.Name
     where try_cast(sa.DateBegin as date) is not null
-        and try_cast(sa.DateEnd as date) is not null
+            and try_cast(sa.DateEnd as date) is not null
             and try_cast(isnull(sa.FlagActive, 0) as bit) is not null
 
     /*Определяем некорректные записи
