@@ -15,10 +15,10 @@ begin
             and f.FlagLoaded = cast(1 as bit)
     )
     begin
-            set @ErrorMessage = 'Ошибка при загрузке файла, проверьте корректность данных'
-            raiserror(@ErrorMessage, 3, 1)
+        set @ErrorMessage = 'Ошибка при загрузке файла, проверьте корректность данных'
+        raiserror(@ErrorMessage, 3, 1)
 
-            return
+        return
     end  
 
     CREATE TABLE #ProcessedRows (ActionType varchar(255), ID int)
